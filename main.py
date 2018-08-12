@@ -14,11 +14,11 @@ from url_opener import URLopener
 
 class PyVideoDownloader:
 
-    def __init__(self,url):
-        self.website_url = url
+    def __init__(self):
+        self.website_url = ""
         self.movie_download_links_dict = dict()
         self.movie_title = ""
-        self.page_scrape()
+        self.init()
 
     def init(self):
         print("****** Download Helper ******")
@@ -87,4 +87,4 @@ class PyVideoDownloader:
         links_file.close()
         print(str.format("Done !! File saved as {0}",filename))
 
-py_downloader = PyVideoDownloader("http://o2tvseries.com/Mr-Robot-9/index.html")
+py_downloader = PyVideoDownloader()
