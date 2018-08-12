@@ -7,7 +7,7 @@ from O2tvseries
 Sunday 12th August 2018
 
 """
-
+import urllib
 import re
 
 def init():
@@ -19,7 +19,7 @@ def init():
     page_scrape(website_url)
 
 def page_scrape(page_url):
-    print("")
+    parent_page =  urllib.request.urlopen(page_url)
 
 def url_validator(url):
     url_regex = re.compile(r"^(?:http)s?://(www)?[a-z0-9./?=\"_:]*", re.IGNORECASE | re.MULTILINE)
