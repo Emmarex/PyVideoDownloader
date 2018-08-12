@@ -41,7 +41,7 @@ class PyVideoDownloader:
             parent_page = url_opener.open(self.website_url)
             parent_page_soup = BeautifulSoup(parent_page,'html.parser')
             available_movie_seasons = parent_page_soup.select(".data > a")
-            self.movie_title = parent_page_soup.title.string.strip()
+            self.movie_title = parent_page_soup.title.string.replace(" ","").strip()
             print(str.format("Movie Title : {0}",self.movie_title))
             print(str.format("Available Seasons : {0}",len(available_movie_seasons)))
             print("Please wait")
@@ -81,7 +81,7 @@ class PyVideoDownloader:
 
     def display_available_download(self):
         # print(self.movie_download_links_dict)
-        filename = str.format("download_links/{0}_download_links.txt",self.movie_title)
+        filename = str.format("download_links/{0}_download_links.txt",self.movie_title.replace(".","").strip())
         links_file = open(filename,"w+")
         links_file.write(str(self.movie_download_links_dict))
         links_file.close()
