@@ -10,12 +10,13 @@ import urllib.request
 import re
 from bs4 import BeautifulSoup
 from url_opener import URLopener
+from collections import OrderedDict
 
 class PyVideoDownloader:
 
     def __init__(self):
         self.website_url = ""
-        self.movie_download_links_dict = dict()
+        self.movie_download_links_dict = OrderedDict()
         self.movie_title = ""
         self.init()
 
