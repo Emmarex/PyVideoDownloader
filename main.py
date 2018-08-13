@@ -1,6 +1,5 @@
 """
 
-By : code_blooded Twitter: @_emmarex_
 Just a simple python file to help me download series i love
 from O2tvseries
 
