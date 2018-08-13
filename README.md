@@ -5,5 +5,6 @@ Nothing fancy just a simple <a href="https://www.python.org/">Python</a> project
 <b>Todo</b>
 <ul type="square">
   <li>Add automatic download</li>
+  <li>Create web version</li>
   <li>Add support for other video download sites</li>
 </ul>
